@@ -1,0 +1,37 @@
+.custom-slider-container {
+  padding: 0 20px;
+  background-color: var(--paleyellow);
+}
+
+.productview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: end;
+  min-height: 400px;
+  padding-top: 110px;
+
+  gap: 20px;
+  cursor: pointer;
+}
+
+.slider-arrows {
+  width: 80px;
+  height: 80px;
+  background: #333;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s;
+}
+
+.slider-arrows:hover {
+  background: #333;
+}
+
+.slick-list,
+.slick-slider,
+.slick-track {
+  padding: 0 30px;
+}

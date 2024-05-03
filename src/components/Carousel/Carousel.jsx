@@ -65,19 +65,25 @@ const Carousel = () => {
           <div className="carousel-content-sec1">
             <AesopSvg color={`${currentItem === 0 ? "#fffef2" : "#333"}`} />
           </div>
-          <Content
-            color={`${currentItem === 0 ? "#fffef2" : "#333"}`}
-            heading={cardData[currentItem].heading}
-            title={cardData[currentItem].title}
-            description={cardData[currentItem].description}
-            btn={
-              <Button
-                color="#fffef2"
-                btnClass={currentItem === 0 ? "btn-white" : "btn-black"}
-                text={cardData[currentItem].btnText}
-              />
-            }
-          />
+          <div
+            style={{
+              width: "35%",
+            }}
+          >
+            <Content
+              color={`${currentItem === 0 ? "#fffef2" : "#333"}`}
+              heading={cardData[currentItem].heading}
+              title={cardData[currentItem].title}
+              description={cardData[currentItem].description}
+              btn={
+                <Button
+                  color="#fffef2"
+                  btnClass={currentItem === 0 ? "btn-white" : "btn-black"}
+                  text={cardData[currentItem].btnText}
+                />
+              }
+            />
+          </div>
 
           {currentItem !== 0 ? (
             <img
