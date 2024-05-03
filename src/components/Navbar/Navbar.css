@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 40px;
+  background-color: var(--paleyellow);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu-options {
+  margin-right: 1.3vw;
+  font-size: 0.875rem;
+  padding: 4px;
+  white-space: nowrap;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+}
+
+.navbar-right {
+  display: flex;
+}

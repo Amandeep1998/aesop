@@ -1,0 +1,29 @@
+.announcement-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.announcement-container.banner-1 {
+  background-color: var(--lightyellow);
+  color: #333333;
+}
+
+.announcement-container.banner-1 a {
+  margin-left: 8px;
+}
+
+.announcement-container.banner-1 a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.announcement-container.banner-2 {
+  background-color: var(--black);
+  color: var(--paleyellow);
+}
+
+.announcement-container.banner-2 span {
+  margin-left: 8px;
+}

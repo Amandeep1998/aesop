@@ -1,38 +1,14 @@
-.App {
-  text-align: center;
-}
+:root {
+  --lightyellow: #c2c2af;
+  --lightGrayishYellow: #f6f5e8;
+  --black: #252525;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  --gray: #9c9c9c;
+  --paleyellow: #fffef2;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  --orange: #f48915;
+  --darkGrey: #464d53;
+  --caloryCard: #656565;
+  --planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
+  --appColor: #3c3f45;
 }

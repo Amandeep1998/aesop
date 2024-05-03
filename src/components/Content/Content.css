@@ -1,0 +1,23 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 35%;
+  height: 642px;
+  padding-top: 110px;
+}
+
+.content h2 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.content h1 {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.7;
+}

@@ -1,0 +1,32 @@
+.button {
+  font-size: 0.875rem;
+  background: transparent;
+  padding: 19px 25px 19px 23px;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.btn-white {
+  border: 1px solid var(--paleyellow);
+  color: var(--paleyellow);
+}
+
+.btn-white:hover {
+  color: var(--black);
+  background: var(--paleyellow);
+  animation: fadeIn 0.5s;
+}
+
+.btn-black {
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  color: #333;
+}
+
+.btn-black:hover {
+  color: var(--paleyellow);
+  background: #333;
+  animation: fadeIn 0.5s;
+}

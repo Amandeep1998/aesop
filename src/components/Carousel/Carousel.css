@@ -1,0 +1,61 @@
+.carousel-content-container {
+  display: flex;
+  gap: 40px;
+  background-color: var(--lightGrayishYellow);
+  padding-left: 40px;
+}
+
+.carousel-content-sec1 {
+  width: 15%;
+  height: 642px;
+  display: flex;
+  padding-top: 110px;
+}
+
+.carousel-content-sec2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 35%;
+  height: 642px;
+  padding-top: 110px;
+}
+
+.carousel-content-sec2 h2 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.carousel-content-sec2 h1 {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
+.carousel-content-sec2 p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.carousel-content-sec2 button {
+}
+
+.carousel-content-sec3-img {
+  width: 50%;
+  height: 642px;
+}
+.carousel-content-bg {
+  background: url("../../assets/wallpaper1-sec1.png") no-repeat;
+  background-size: cover;
+}
+
+.carousel-arrows {
+  cursor: pointer;
+}
+
+.carousel-controllers {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  color: #666;
+}
