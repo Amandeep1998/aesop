@@ -1,6 +1,8 @@
 .custom-slider-container {
   padding: 0 20px;
   background-color: var(--paleyellow);
+  min-height: 557px !important;
+  padding-top: 150px;
 }
 
 .productview-container {
@@ -11,6 +13,7 @@
   justify-content: end;
   min-height: 400px;
   padding-top: 110px;
+  height: 557px;
 
   gap: 20px;
   cursor: pointer;
@@ -30,8 +33,10 @@
   background: #333;
 }
 
-.slick-list,
-.slick-slider,
-.slick-track {
-  padding: 0 30px;
+.slick-arrow {
+  z-index: 20;
+}
+
+.slick-slider {
+  padding: 0 60px;
 }

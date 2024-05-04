@@ -1,11 +1,19 @@
 import React from "react";
 import "./Content.css";
 
-const Content = ({ heading, title, description, btn, color }) => {
+const Content = ({
+  heading,
+  title,
+  description,
+  btn,
+  color,
+  height = "100%",
+}) => {
   return (
     <div
       style={{
         color: color,
+        height: height,
       }}
       className="content"
     >

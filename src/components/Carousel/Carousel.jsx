@@ -68,6 +68,7 @@ const Carousel = () => {
           <div
             style={{
               width: "35%",
+              paddingTop: "110px",
             }}
           >
             <Content

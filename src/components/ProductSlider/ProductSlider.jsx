@@ -25,58 +25,7 @@ const ProductView = ({ img, heading, description }) => {
   );
 };
 
-const ProductSlider = () => {
-  const [productData, setProductData] = useState([
-    {
-      id: 1,
-      img: assets.immaculate,
-      heading: "Immaculate Facial Tonic",
-      description: "Exfoliating tonic with a light finish",
-    },
-    {
-      id: 2,
-      img: assets.btriplecgel,
-      heading: "B Triple C Facial Balancing Gel",
-      description: "Embracing, vitamin-rich hydration",
-    },
-    {
-      id: 1,
-      img: assets.immaculate,
-      heading: "Immaculate Facial Tonic",
-      description: "Exfoliating tonic with a light finish",
-    },
-    {
-      id: 2,
-      img: assets.btriplecgel,
-      heading: "B Triple C Facial Balancing Gel",
-      description: "Embracing, vitamin-rich hydration",
-    },
-    {
-      id: 1,
-      img: assets.immaculate,
-      heading: "Immaculate Facial Tonic",
-      description: "Exfoliating tonic with a light finish",
-    },
-    {
-      id: 2,
-      img: assets.btriplecgel,
-      heading: "B Triple C Facial Balancing Gel",
-      description: "Embracing, vitamin-rich hydration",
-    },
-    {
-      id: 1,
-      img: assets.immaculate,
-      heading: "Immaculate Facial Tonic",
-      description: "Exfoliating tonic with a light finish",
-    },
-    {
-      id: 2,
-      img: assets.btriplecgel,
-      heading: "B Triple C Facial Balancing Gel",
-      description: "Embracing, vitamin-rich hydration",
-    },
-  ]);
-
+const ProductSlider = ({ showContent, content, productData }) => {
   const [showArrows, setShowArrows] = useState(false);
 
   function SampleNextArrow(props) {
@@ -138,21 +87,8 @@ const ProductSlider = () => {
       className="slider-container custom-slider-container"
     >
       <Slider {...settings}>
-        <div>
-          <Content
-            color={"#333"}
-            heading={"Skin Care+"}
-            title={"Intensive formulations for complex skin"}
-            description={
-              "Explore products formulated with mature skin and urban dwellers in mind, to provide daily hydration and the additional benefit of potent vitamins and anti-oxidants."
-            }
-            btn={
-              <span>
-                Browse formulations {"  "} <FaArrowRight />
-              </span>
-            }
-          />
-        </div>
+        {showContent && content}
+
         {productData &&
           productData.map((item, i) => {
             return (
