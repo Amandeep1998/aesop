@@ -8,6 +8,7 @@ import { assets } from "../../assets/assets";
 import Section from "../../components/Section/Section";
 import { FaArrowRight } from "react-icons/fa6";
 import Slider from "react-slick";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const [productData, setProductData] = useState([
@@ -287,6 +288,60 @@ const Home = () => {
           />
         </div>
       </div>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "150px 40px",
+        }}
+      >
+        <span
+          style={{
+            fontSize: "28px",
+            textAlign: "center",
+          }}
+        >
+          ‘Your best and wisest refuge from all troubles <br />
+          <span> is in your science.’ </span> <br />
+          <span
+            style={{
+              fontSize: "14px",
+            }}
+          >
+            Ada Lovelace
+          </span>
+        </span>
+      </div>
+
+      <div className="trust-badges-container">
+        <div className="trust-badges">
+          <span>Certified B Corp</span>
+          <p>
+            We meet the highest verified standards of social and environmental
+            performance, transparency and accountability.
+          </p>
+        </div>
+
+        <div className="trust-badges">
+          <span>Leaping Bunny approved</span>
+          <p>
+            We meet the highest verified standards of social and environmental
+            performance, transparency and accountability.
+          </p>
+        </div>
+
+        <div className="trust-badges">
+          <span>PETA recognition</span>
+          <p>
+            We appear on PETA's internationally recognised vegan and
+            cruelty-free lists.
+          </p>
+        </div>
+      </div>
+
+      <Footer />
     </>
   );
 };

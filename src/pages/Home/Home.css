@@ -29,3 +29,25 @@
   height: 400px !important;
   width: 580px !important;
 } */
+
+.trust-badges-container {
+  background-color: #f6f5e8;
+  display: flex;
+  justify-items: space-around;
+  padding: 50px 80px;
+}
+
+.trust-badges-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.trust-badges span {
+  font-weight: 500;
+}
+
+.trust-badges p {
+  font-weight: 300;
+}

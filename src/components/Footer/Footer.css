@@ -1,0 +1,81 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: var(--black);
+  gap: 15px;
+  padding: 50px 40px;
+}
+
+.underline-heading {
+  color: var(--paleyellow);
+  border-bottom: 1px solid var(--paleyellow);
+  padding: 10px;
+}
+
+.footer-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-right {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--paleyellow);
+}
+
+.footer-email-input {
+  border: 1px solid var(--paleyellow);
+  padding: 10px;
+}
+
+.footer-email-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-email-input input {
+  width: 80%;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: var(--paleyellow);
+}
+
+.footer-checkbox {
+  display: flex;
+  gap: 10px;
+  color: var(--paleyellow);
+  align-items: flex-start;
+}
+
+.footer-checkbox span {
+  font-size: 16px;
+}
+
+.footer-link span {
+  display: flex;
+
+  gap: 5px;
+}
+
+.footer-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-section {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.footer-company-name {
+  border-top: 3px solid var(--paleyellow);
+  padding: 20px 40px;
+  color: var(--paleyellow);
+}
