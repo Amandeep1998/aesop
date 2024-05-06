@@ -5,7 +5,6 @@ import { GoArrowUpRight } from "react-icons/go";
 import { useMediaQuery } from "react-responsive";
 
 const Footer = () => {
-  const isTablet = useMediaQuery({ maxWidth: 1050 });
   const isMobile = useMediaQuery({ maxWidth: 700 });
 
   return (

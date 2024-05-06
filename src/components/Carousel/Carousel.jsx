@@ -12,7 +12,6 @@ import { useMediaQuery } from "react-responsive";
 const Carousel = () => {
   const [currentItem, setCurrentItem] = useState(0);
 
-  const isTablet = useMediaQuery({ maxWidth: 1050 });
   const isMobile = useMediaQuery({ maxWidth: 700 });
 
   const [cardData, setCardData] = useState([
@@ -99,6 +98,7 @@ const Carousel = () => {
 
           {currentItem !== 0 ? (
             <img
+              alt="test"
               className="carousel-content-sec3-img"
               src={cardData[currentItem].img}
             />

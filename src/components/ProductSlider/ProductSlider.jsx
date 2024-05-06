@@ -17,6 +17,7 @@ const ProductView = ({ img, heading, description }) => {
             objectFit: "contain",
           }}
           src={img}
+          alt="test"
         />
 
         <span>{heading}</span>

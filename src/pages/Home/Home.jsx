@@ -66,7 +66,6 @@ const Home = () => {
 
   const [showArrows, setShowArrows] = useState(false);
 
-  const isTablet = useMediaQuery({ maxWidth: 1050 });
   const isMobile = useMediaQuery({ maxWidth: 700 });
 
   function SampleNextArrow(props) {
@@ -159,7 +158,7 @@ const Home = () => {
         images={<img src={assets.section3img} />}
       />
       <div className="section-4">
-        <img src={assets.section4img} />
+        <img src={assets.section4img} alt="test" />
         <div>
           <Content
             color={"#333"}
@@ -194,7 +193,7 @@ const Home = () => {
             text={"Discover Protective Facial Lotion SPF50"}
           />
         }
-        images={<img src={assets.section6img} />}
+        images={<img alt="test" src={assets.section6img} />}
       />
 
       <ProductSlider
@@ -219,7 +218,7 @@ const Home = () => {
       />
 
       <div className="section-4">
-        <img src={assets.section8img} />
+        <img alt="test" src={assets.section8img} />
         <div>
           <Content
             color={"#333"}
@@ -263,11 +262,19 @@ const Home = () => {
             className="slider-container"
           >
             <Slider {...settings}>
-              <img className="images-slider" src={assets.section8img} />
+              <img
+                alt="test"
+                className="images-slider"
+                src={assets.section8img}
+              />
 
-              <img className="images-slider" src={assets.section6img} />
+              <img
+                alt="test"
+                className="images-slider"
+                src={assets.section6img}
+              />
 
-              <img src={assets.section4img} />
+              <img alt="test" src={assets.section4img} />
             </Slider>
           </div>
         }
