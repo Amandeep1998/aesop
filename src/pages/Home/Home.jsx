@@ -9,11 +9,11 @@ import Section from "../../components/Section/Section";
 import { FaArrowRight } from "react-icons/fa6";
 import Slider from "react-slick";
 import Footer from "../../components/Footer/Footer";
-import Navbar from "../../components/Navbar/Navbar";
+
 import { useMediaQuery } from "react-responsive";
 
 const Home = () => {
-  const [productData, setProductData] = useState([
+  const [productData] = useState([
     {
       id: 1,
       img: assets.immaculate,
@@ -155,7 +155,7 @@ const Home = () => {
             text={"Explore Summer Formulations"}
           />
         }
-        images={<img src={assets.section3img} />}
+        images={<img alt="test" src={assets.section3img} />}
       />
       <div className="section-4">
         <img src={assets.section4img} alt="test" />
@@ -282,6 +282,7 @@ const Home = () => {
 
       <div className="section-4">
         <img
+          alt="test"
           style={{
             width: "700px",
             height: "200px",

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { assets } from "../../assets/assets";
+
 import Slider from "react-slick";
 import "./ProductSlider.css";
-import Content from "../Content/Content";
-import { FaArrowRight } from "react-icons/fa6";
+
 import { useMediaQuery } from "react-responsive";
 
 const ProductView = ({ img, heading, description }) => {
@@ -64,7 +63,6 @@ const ProductSlider = ({ showContent, content, productData }) => {
       );
   }
 
-  const isTablet = useMediaQuery({ maxWidth: 1050 });
   const isMobile = useMediaQuery({ maxWidth: 700 });
 
   const settings = {

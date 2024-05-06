@@ -14,7 +14,7 @@ const Carousel = () => {
 
   const isMobile = useMediaQuery({ maxWidth: 700 });
 
-  const [cardData, setCardData] = useState([
+  const [cardData] = useState([
     {
       id: 1,
       img: assets.wallpaper1,

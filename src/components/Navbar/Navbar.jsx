@@ -60,7 +60,7 @@ const Navbar = () => {
     return (
       <div className="navbar-mobile">
         <div className="navbar-left-mobile">
-          <AesopSvg color={`${0 === 0 ? "#fffef2" : "#333"}`} />
+          <AesopSvg color={"#fffef2"} />
         </div>
         <div className="navbar-right-mobile">
           <CiSearch fill="#fffef2" fontSize={20} />
