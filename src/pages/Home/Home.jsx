@@ -9,6 +9,8 @@ import Section from "../../components/Section/Section";
 import { FaArrowRight } from "react-icons/fa6";
 import Slider from "react-slick";
 import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
+import { useMediaQuery } from "react-responsive";
 
 const Home = () => {
   const [productData, setProductData] = useState([
@@ -63,6 +65,9 @@ const Home = () => {
   ]);
 
   const [showArrows, setShowArrows] = useState(false);
+
+  const isTablet = useMediaQuery({ maxWidth: 1050 });
+  const isMobile = useMediaQuery({ maxWidth: 700 });
 
   function SampleNextArrow(props) {
     const { className, style, onClick, customClass, showArrows } = props;
@@ -120,7 +125,7 @@ const Home = () => {
         productData={productData}
         content={
           <Content
-            height="500px"
+            height={isMobile ? "300px" : "500px"}
             color={"#333"}
             heading={"Skin Care+"}
             title={"Intensive formulations for complex skin"}
@@ -196,7 +201,7 @@ const Home = () => {
         productData={productData}
         content={
           <Content
-            height="500px"
+            height={!isMobile ? "600px" : "300px"}
             color={"#333"}
             heading={"Sun Care and SPF"}
             title={"Pair time in the sun with intelligent care"}
@@ -247,7 +252,7 @@ const Home = () => {
         images={
           <div
             style={{
-              width: "60%",
+              width: "100%",
             }}
             onMouseEnter={() => {
               setShowArrows(true);
@@ -269,7 +274,14 @@ const Home = () => {
       />
 
       <div className="section-4">
-        <img src={assets.section8img} />
+        <img
+          style={{
+            width: "700px",
+            height: "200px",
+            objectFit: "contain",
+          }}
+          src={assets.eminently}
+        />
         <div>
           <Content
             color={"#333"}
@@ -295,12 +307,14 @@ const Home = () => {
           justifyContent: "center",
           alignItems: "center",
           padding: "150px 40px",
+          backgroundColor: "#fffef2",
         }}
       >
         <span
           style={{
             fontSize: "28px",
             textAlign: "center",
+            fontWeight: "300",
           }}
         >
           ‘Your best and wisest refuge from all troubles <br />

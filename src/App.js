@@ -5,10 +5,20 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 
 
+
 function App() {
+ 
+
+
   return (
     <div className="App">
-      <Announcement text={"Purchase two eligible seasonal products to receive a Karst Eau de Parfum sample."} banner={"banner-1"}/>
+      <Announcement text={<span>Purchase two eligible seasonal products to receive a Karst Eau de Parfum sample. <span 
+        style={{
+          marginLeft:"5px",
+          textDecoration:"underline",
+          cursor: "pointer"
+        }}
+      >Browse Formulations</span> </span>} banner={"banner-1"}/>
       <Announcement text={"Click and Collect is now available in Hong Kong. Enjoy complimentary shipping on all orders."} banner={"banner-2"}/>
       <Navbar />
        <Routes>

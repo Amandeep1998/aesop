@@ -8,6 +8,7 @@
 .announcement-container.banner-1 {
   background-color: var(--lightyellow);
   color: #333333;
+  line-height: 20px;
 }
 
 .announcement-container.banner-1 a {
@@ -22,8 +23,8 @@
 .announcement-container.banner-2 {
   background-color: var(--black);
   color: var(--paleyellow);
+  line-height: 20px;
 }
 
 .announcement-container.banner-2 span {
-  margin-left: 8px;
 }

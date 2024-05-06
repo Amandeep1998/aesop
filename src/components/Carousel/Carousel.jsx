@@ -7,9 +7,13 @@ import { AesopSvg } from "../../assets/svgJs/AesopSvg";
 import "./Carousel.css";
 import Button from "../Button/Button";
 import Content from "../Content/Content";
+import { useMediaQuery } from "react-responsive";
 
 const Carousel = () => {
   const [currentItem, setCurrentItem] = useState(0);
+
+  const isTablet = useMediaQuery({ maxWidth: 1050 });
+  const isMobile = useMediaQuery({ maxWidth: 700 });
 
   const [cardData, setCardData] = useState([
     {
@@ -63,12 +67,73 @@ const Carousel = () => {
           }`}
         >
           <div className="carousel-content-sec1">
-            <AesopSvg color={`${currentItem === 0 ? "#fffef2" : "#333"}`} />
+            {!isMobile ? (
+              <AesopSvg color={`${currentItem === 0 ? "#fffef2" : "#333"}`} />
+            ) : null}
           </div>
+
+          {!isMobile ? (
+            <>
+              <div
+                style={{
+                  width: "35%",
+                  paddingTop: "110px",
+                }}
+              >
+                <Content
+                  color={`${currentItem === 0 ? "#fffef2" : "#333"}`}
+                  heading={cardData[currentItem].heading}
+                  title={cardData[currentItem].title}
+                  description={cardData[currentItem].description}
+                  btn={
+                    <Button
+                      color="#fffef2"
+                      btnClass={currentItem === 0 ? "btn-white" : "btn-black"}
+                      text={cardData[currentItem].btnText}
+                    />
+                  }
+                />
+              </div>
+            </>
+          ) : null}
+
+          {currentItem !== 0 ? (
+            <img
+              className="carousel-content-sec3-img"
+              src={cardData[currentItem].img}
+            />
+          ) : (
+            ""
+          )}
+        </div>
+      </div>
+      <div
+        className={`carousel-controllers ${
+          isMobile && currentItem === 0 ? "carousel-controllers-bg-1" : ""
+        }`}
+      >
+        <MdKeyboardArrowLeft
+          fontSize={24}
+          className="carousel-arrows"
+          onClick={prevItem}
+        />
+        <span>{cardData[currentItem].id + " / " + cardData.length}</span>
+        <MdKeyboardArrowRight
+          fontSize={24}
+          className="carousel-arrows"
+          onClick={nextItem}
+        />
+
+        <GiPlayButton fontSize={22} />
+      </div>
+
+      {isMobile ? (
+        <>
           <div
             style={{
-              width: "35%",
-              paddingTop: "110px",
+              width: "100%",
+              padding: "70px 20px 40px",
+              backgroundColor: currentItem === 0 ? "#333" : "#f6f5e8",
             }}
           >
             <Content
@@ -85,32 +150,8 @@ const Carousel = () => {
               }
             />
           </div>
-
-          {currentItem !== 0 ? (
-            <img
-              className="carousel-content-sec3-img"
-              src={cardData[currentItem].img}
-            />
-          ) : (
-            ""
-          )}
-        </div>
-      </div>
-      <div className="carousel-controllers">
-        <MdKeyboardArrowLeft
-          fontSize={24}
-          className="carousel-arrows"
-          onClick={prevItem}
-        />
-        <span>{cardData[currentItem].id + " / " + cardData.length}</span>
-        <MdKeyboardArrowRight
-          fontSize={24}
-          className="carousel-arrows"
-          onClick={nextItem}
-        />
-
-        <GiPlayButton fontSize={22} />
-      </div>
+        </>
+      ) : null}
     </>
   );
 };

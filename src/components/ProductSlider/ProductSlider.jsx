@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "./ProductSlider.css";
 import Content from "../Content/Content";
 import { FaArrowRight } from "react-icons/fa6";
+import { useMediaQuery } from "react-responsive";
 
 const ProductView = ({ img, heading, description }) => {
   return (
@@ -62,11 +63,14 @@ const ProductSlider = ({ showContent, content, productData }) => {
       );
   }
 
+  const isTablet = useMediaQuery({ maxWidth: 1050 });
+  const isMobile = useMediaQuery({ maxWidth: 700 });
+
   const settings = {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: isMobile ? 1 : 3,
     slidesToScroll: 1,
     nextArrow: (
       <SampleNextArrow showArrows={showArrows} customClass="slider-arrows" />
@@ -76,34 +80,38 @@ const ProductSlider = ({ showContent, content, productData }) => {
     ),
     adaptiveHeight: true,
   };
-  return (
-    <div
-      onMouseEnter={() => {
-        setShowArrows(true);
-      }}
-      onMouseLeave={() => {
-        setShowArrows(false);
-      }}
-      className="slider-container custom-slider-container"
-    >
-      <Slider {...settings}>
-        {showContent && content}
 
-        {productData &&
-          productData.map((item, i) => {
-            return (
-              <>
-                <ProductView
-                  heading={item.heading}
-                  img={item.img}
-                  description={item.description}
-                  key={i}
-                />
-              </>
-            );
-          })}
-      </Slider>
-    </div>
+  return (
+    <>
+      <div
+        onMouseEnter={() => {
+          setShowArrows(true);
+        }}
+        onMouseLeave={() => {
+          setShowArrows(false);
+        }}
+        className="slider-container custom-slider-container"
+      >
+        {showContent && isMobile && content}
+        <Slider {...settings}>
+          {showContent && !isMobile && content}
+
+          {productData &&
+            productData.map((item, i) => {
+              return (
+                <>
+                  <ProductView
+                    heading={item.heading}
+                    img={item.img}
+                    description={item.description}
+                    key={i}
+                  />
+                </>
+              );
+            })}
+        </Slider>
+      </div>
+    </>
   );
 };
 

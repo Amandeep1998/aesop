@@ -7,10 +7,13 @@ import section3img from "./section3-wallpaper.png"
 import section4img from "./section4-wallpaper.png"
 import section6img from "./section6-wallpaper.png"
 import section8img from "./section-8-wallpaper.png"
+import eminently from "./eminently.png"
+import mobilebg from "./mobile-bg.png"
 
 
 
 
 
 
-export const assets = { wallpaper1, wallpaper2, wallpaper3, immaculate, btriplecgel, section3img, section4img,section6img, section8img }
+
+export const assets = { wallpaper1, wallpaper2, wallpaper3, immaculate, btriplecgel, section3img, section4img,section6img, section8img, eminently, mobilebg }

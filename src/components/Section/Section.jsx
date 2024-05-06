@@ -16,7 +16,7 @@ const Section = ({ color, heading, title, description, btn, images }) => {
             btn={btn}
           />
         </div>
-        {images}
+        <div className="sec-img">{images}</div>
       </div>
     </>
   );

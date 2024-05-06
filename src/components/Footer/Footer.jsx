@@ -2,8 +2,12 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import "./Footer.css";
 import { GoArrowUpRight } from "react-icons/go";
+import { useMediaQuery } from "react-responsive";
 
 const Footer = () => {
+  const isTablet = useMediaQuery({ maxWidth: 1050 });
+  const isMobile = useMediaQuery({ maxWidth: 700 });
+
   return (
     <div className="footer">
       <div className="footer-section">
@@ -11,6 +15,7 @@ const Footer = () => {
           <h3 className="underline-heading">
             Subscribe to Aesop communications
           </h3>
+
           <div className="footer-email-input">
             <input placeholder="Email Address" />
             <FaArrowRight fill="#fffef2" />
@@ -117,23 +122,42 @@ const Footer = () => {
               <span>繁體中文</span>
             </div>
           </div>
+
+          {isMobile ? (
+            <div className="footer-links-container">
+              <h3 className="underline-heading"> Sustainability</h3>
+              <span
+                style={{
+                  lineHeight: "20px",
+                }}
+              >
+                All Aesop products are vegan, and we do not test our
+                formulations or ingredients on animals. We are Leaping Bunny
+                approved and a Certified B Corporation. Learn more
+              </span>
+            </div>
+          ) : null}
         </div>
       </div>
       <div className="footer-section">
         <div className="footer-left">
-          <h3 className="underline-heading">Sustainability</h3>
-          <div className="footer-email-input">
-            <input placeholder="Email Address" />
-            <FaArrowRight fill="#fffef2" />
-          </div>
-          <div className="footer-checkbox">
-            <input type="checkbox" />{" "}
-            <span>
-              All Aesop products are vegan, and we do not test our formulations
-              or ingredients on animals. We are Leaping Bunny approved and a
-              Certified B Corporation. Learn more
-            </span>
-          </div>
+          {!isMobile ? (
+            <>
+              <h3 className="underline-heading">Sustainability</h3>
+              <div className="footer-email-input">
+                <input placeholder="Email Address" />
+                <FaArrowRight fill="#fffef2" />
+              </div>
+              <div className="footer-checkbox">
+                <input type="checkbox" />{" "}
+                <span>
+                  All Aesop products are vegan, and we do not test our
+                  formulations or ingredients on animals. We are Leaping Bunny
+                  approved and a Certified B Corporation. Learn more
+                </span>
+              </div>
+            </>
+          ) : null}
         </div>
         <div className="footer-right">
           <div className="footer-links-container">
@@ -200,27 +224,29 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="footer-links-container">
-            <h3 className="underline-heading"> Location preferences</h3>
-            <div className="footer-link">
-              <span>Shipping:</span>
-            </div>
-            <div className="footer-link">
-              <span>Hong Kong, SAR</span>
-            </div>
+          {!isMobile ? (
+            <div className="footer-links-container">
+              <h3 className="underline-heading"> Location preferences</h3>
+              <div className="footer-link">
+                <span>Shipping:</span>
+              </div>
+              <div className="footer-link">
+                <span>Hong Kong, SAR</span>
+              </div>
 
-            <div className="footer-link">
-              <span>Language:</span>
-            </div>
+              <div className="footer-link">
+                <span>Language:</span>
+              </div>
 
-            <div className="footer-link">
-              <span>English</span>
-            </div>
+              <div className="footer-link">
+                <span>English</span>
+              </div>
 
-            <div className="footer-link">
-              <span>繁體中文</span>
+              <div className="footer-link">
+                <span>繁體中文</span>
+              </div>
             </div>
-          </div>
+          ) : null}
         </div>
       </div>
 

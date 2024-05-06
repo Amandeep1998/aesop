@@ -25,4 +25,26 @@
 
 .navbar-right {
   display: flex;
+  align-items: center;
+}
+
+.navbar-mobile {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: transparent;
+  position: absolute;
+  color: var(--paleyellow);
+  width: 100%;
+}
+
+.navbar-left-mobile svg {
+  width: 70px;
+  height: 22px;
+}
+
+.navbar-right-mobile {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }

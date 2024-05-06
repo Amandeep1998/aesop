@@ -2,7 +2,7 @@
   padding: 0 20px;
   background-color: var(--paleyellow);
   min-height: 557px !important;
-  padding-top: 150px;
+  padding-top: 50px;
 }
 
 .productview-container {
@@ -38,5 +38,5 @@
 }
 
 .slick-slider {
-  padding: 0 60px;
+  padding: 0 40px;
 }
