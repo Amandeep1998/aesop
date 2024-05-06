@@ -5,20 +5,19 @@ import { useMediaQuery } from "react-responsive";
 
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AesopSvg } from "../../assets/svgJs/AesopSvg";
+let defaultMenuOptions = [
+  "Skin Care",
+  "Body & Hand",
+  "Hair",
+  "Home",
+  "Kits & Travel",
+  "Gifts",
+  "Read",
+  "Stores",
+  "Facial Appointments",
+];
 
 const Navbar = () => {
-  let defaultMenuOptions = [
-    "Skin Care",
-    "Body & Hand",
-    "Hair",
-    "Home",
-    "Kits & Travel",
-    "Gifts",
-    "Read",
-    "Stores",
-    "Facial Appointments",
-  ];
-
   const [menuOptions, setMenuOptions] = useState(defaultMenuOptions);
 
   const isTablet = useMediaQuery({ maxWidth: 1050 });
